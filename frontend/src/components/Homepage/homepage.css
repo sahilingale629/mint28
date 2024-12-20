@@ -1,0 +1,320 @@
+/* Global Styles */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1b1f3a, #293050);
+  color: #ffffff;
+}
+
+/* Header */
+.website-header {
+  background: linear-gradient(45deg, #32cd32, #1b1f3a);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #32cd32;
+}
+
+/* Containers */
+.homepage-content {
+  margin: 30px 60px;
+}
+
+.order-firing-container {
+  display: flex;
+  gap: 20px;
+}
+
+.current-instrument-container,
+.quantity-container {
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.current-instrument-container {
+  display: flex;
+  align-items: start;
+  background-color: #2c3e50;
+  padding: 16px 12px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 75%;
+  margin-left: 15px;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.current-instrument-container .price {
+  font-size: 30px;
+  color: #27ae60;
+}
+
+.ltp-container {
+  background-color: #34495e;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 16px;
+  min-width: 100px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.quantity-container {
+  background-color: #34495e;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.quantity-input {
+  width: 150px; /* Adjust width as needed */
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background: #1b1f3a; /* Dark background */
+  border: 2px solid #32cd32; /* Green border */
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.quantity-input::placeholder {
+  color: #b0b0b0; /* Lighter gray placeholder */
+}
+
+.quantity-input:focus {
+  border-color: #32cd32; /* Highlight border in green */
+  background: #293050; /* Slightly lighter background */
+  color: #ffffff;
+  box-shadow: 0 0 10px #32cd32; /* Green glow effect */
+  transform: scale(1.03); /* Slight scaling */
+}
+
+.quantity-input:hover {
+  border-color: #32cd32;
+  background-color: #293050; /* Lighter hover background */
+  box-shadow: 0 0 10px #32cd32; /* Subtle green glow */
+
+}
+
+.quantity-container button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.quantity-container button:hover {
+  background-color: #2ecc71;
+}
+
+/* Search Bar */
+/* Search Bar Container */
+.search-bar-container {
+  position: relative; /* Acts as the reference point for absolute children */
+  width: 30%;
+  min-width: 250px;
+}
+
+/* Search Input */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.8rem;
+  border: 2px solid #32cd32;
+  border-radius: 10px;
+  background-color: #1b1f3a;
+  color: white;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.search-input::placeholder {
+  color: #b0b0b0;
+}
+
+.search-input:focus {
+  border-color: #ffffff;
+  background-color: #293050;
+  box-shadow: 0 0 10px #32cd32;
+}
+
+/* Search Results (Dropdown Style) */
+/* Hide Search Results */
+.search-results.hidden {
+  display: none;
+}
+
+/* Search Results (Default) */
+.search-results {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 2px solid #32cd32;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: rgba(27, 31, 58, 0.95);
+  z-index: 10;
+}
+
+/* Table Styling */
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.result-table th {
+  position: sticky;
+  top: 0;
+  background-color: #32cd32;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.result-table td {
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.result-table tr:nth-child(even) {
+  background-color: #293050;
+}
+
+.result-table tr:hover {
+  background-color: #32cd32;
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+}
+
+/* Buttons */
+button {
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.buy-button {
+  background: linear-gradient(45deg, #32cd32, #1b1f3a);
+  box-shadow: 0 4px 15px rgba(50, 205, 50, 0.5);
+}
+
+.sell-button {
+  background: linear-gradient(45deg, #ff4c4c, #1b1f3a);
+  box-shadow: 0 4px 15px rgba(255, 76, 76, 0.5);
+}
+
+.buy-button:hover,
+.sell-button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.login-all-clients-button {
+  background: #1b1f3a;
+  border: 2px solid #32cd32;
+}
+
+.login-all-clients-button:hover {
+  background: #32cd32;
+  color: #1b1f3a;
+  box-shadow: 0 0 10px #32cd32;
+}
+
+/* Table for Added Rows */
+.added-rows-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 2px solid #ccc;
+}
+
+.added-rows-table th,
+.added-rows-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.added-rows-table th {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.added-rows-table tr:nth-child(even) {
+  background-color: #293050;
+}
+
+/* Footer */
+.website-footer {
+  text-align: center;
+  background: linear-gradient(45deg, #293050, #1b1f3a);
+  color: #ffffff;
+  padding: 15px 0;
+  font-size: 1rem;
+  border-top: 2px solid #32cd32;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.homepage-container {
+  animation: fadeIn 1s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-firing-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buy-button,
+  .sell-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-bar-container {
+    width: 100%;
+  }
+}

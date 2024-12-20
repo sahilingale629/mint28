@@ -1,19 +1,18 @@
-// src/components/Login.js
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
-import "./Login.css"; // Import the CSS file for styling
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./login.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // Loading state
+  const [isLoading, setIsLoading] = useState(false);
 
-  const navigate = useNavigate(); // Create navigate function
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setIsLoading(true); // Set loading to true when starting the login request
+    setIsLoading(true); 
     setMessage(""); // Clear any previous messages
 
     const data = { username, password };
