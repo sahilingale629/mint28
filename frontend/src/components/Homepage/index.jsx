@@ -120,7 +120,7 @@ export default function Homepage() {
     // unsubscribe instrument if not in watch list
     if (
       selectedInstrument &&
-      cacheInstrumentWatchList.current
+      !cacheInstrumentWatchList.current
         .get(selectedInstrument?.exchangeType)
         .has(selectedInstrument?.token)
     ) {
